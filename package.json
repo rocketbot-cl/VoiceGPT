@@ -1,0 +1,153 @@
+{
+    "author":"David Cuello - Corina Suarez",
+    "description": "Module to work with VoiceGPT | Módulo para trabajar con VoiceGPT",
+    "description_lang": {
+        "es": "Envía un audio y recibe la data según el template creado en VoiceGPT.",
+        "en": "Send an audio and receive the data according to the template created in VoiceGPT.",
+        "pr": "Envie um áudio e receba os dados conforme template criado no VoiceGPT."
+    },
+    "disclaimer":"THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+    "version":"1.0.0",
+    "license": "MIT",
+    "homepage":"http://rocketbot.com/",
+    "linux": false,
+    "windows": true,
+    "mac": true,
+    "docker": false,
+    "name": "VoiceGPT",
+    "dependencies": {},
+    "title": {
+        "en": "VoiceGPT",
+        "es": "VoiceGPT",
+        "pr": "VoiceGPT"
+    },
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAS1BMVEVHcEy8Fxu8Fxu4AAG8Fxu8Fxu8Fxu8Fxu8Fxu8Fxu8Fxv//v7NXF68FRm7DxTlsrLQcnP02tr45ufHSEvWiYr77e7CKy7LU1XsyMkQASnoAAAACnRSTlMA0ur/Dn2kXsd0hcc+BAAAAIpJREFUGJVlj9sSgzAIRDGrJm7MxSRq//9Li1pn2soLcGCWRUTDjq7r3GjlCkuGSMZAnmjSnjXGqomTSE8S8wqUBi17GbTPB1gadGUQR8DPa61LLhvoxCBtfi4pLdnvCUao8xtkDz6BwVpvoNrmI1paU3CKDgx47dfZeJxVY+HH2GGd39afz/29/wYuhgnIfA5CigAAAABJRU5ErkJggg==",
+    "children": [
+        {
+            "en": {
+                "title": "Get audio template",
+                "description": "Obtains the data indicated in the VoiceGPT template from an audio",
+                "title_options": "Select Option",
+                "options":null
+            },
+            "es": {
+                "title": "Obtener template de audio",
+                "description": "Obtiene de un audio los datos indicados en el template de VoiceGPT",
+                "title_options": "Seleccione una opción",
+                "options": null
+            },
+            "pr": {
+                "title": "Obter o template do audio",
+                "description": "Obtém os dados indicados no modelo VoiceGPT de um áudio",
+                "title_options": "Selecione uma opção",
+                "options": null
+            },
+            "form": {
+                "css": "modal-lg",
+                "inputs": [
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey...",
+                            "en": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey...",
+                            "pr": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ey..."
+                        },
+                        "title": {
+                            "es": "API Key:",
+                            "en": "API Key:",
+                            "pr": "API Key:"
+                        },
+                        "description":{
+                            "es": "Key generada en la sección Perfil de VoiceGPT.",
+                            "en": "Key generated in the Profile section of VoiceGPT.",
+                            "pr": "Chave gerada na seção Perfil do VoiceGPT."
+                        },
+                        "id": "api_key",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "83540b69bb195851896cd3881555c222",
+                            "en": "83540b69bb195851896cd3881555c222",
+                            "pr": "83540b69bb195851896cd3881555c222"
+                        },
+                        "title": {
+                            "es": "ID del Template:",
+                            "en": "Template ID:",
+                            "pr": "ID do Template:"
+                        },
+                        "description":{
+                            "es": "El ID del template a ocupar. Puede sacarse de la url: https://voicegpt.rocketbot.com/#/template/{template}",
+                            "en": "The ID of the template to occupy. It can be taken from the url: https://voicegpt.rocketbot.com/#/template/{template}",
+                            "pr": "O ID do modelo a ser ocupado. Pode ser obtido no URL: https://voicegpt.rocketbot.com/#/template/{template}"
+                        },
+                        "id": "template",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "file_select",
+                        "title": {
+                            "es": "Seleccione el audio",
+                            "en": "Select audio",
+                            "pr": "Selecione o áudio"
+                        },
+                        "placeholder": {
+                            "es": "C:/Users/user/Downloads/file.mp3",
+                            "en": "C:/Users/user/Downloads/file.mp3",
+                            "pr": "C:/Users/user/Downloads/file.mp3"
+                        },
+                        "description": {
+                            "es": "URL de la ubicación y nombre del audio a enviar",
+                            "en": "URL of the location and name of the audio to send",
+                            "pr": "URL do local e nome do áudio a ser enviado"
+                        },
+                        "id": "files",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "Variable",
+                            "en": "Variable",
+                            "pr": "Variável"
+                        },
+                        "title": {
+                            "es": "Asignar resultado a variable:",
+                            "en": "Assign result to variable:",
+                            "pr": "Atribuir resultado à variável:"
+                        },
+                        "description": {
+                            "es": "Variable donde se almacenará el resultado.",
+                            "en": "Variable where the result will be stored.",
+                            "pr": "Variável onde o resultado será armazenado."
+                        },
+                        "help": {
+                            "es": "Nombre de variable sin {}",
+                            "en": "Variable name without {}",
+                            "pr": "Nome da variável sem {}"
+                        },
+                        "remove_vars" : true,
+                        "id": "result",
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
+                    }
+                ]
+            },
+            "video_youtube": "",
+            "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAS1BMVEVHcEy8Fxu8Fxu4AAG8Fxu8Fxu8Fxu8Fxu8Fxu8Fxu8Fxv//v7NXF68FRm7DxTlsrLQcnP02tr45ufHSEvWiYr77e7CKy7LU1XsyMkQASnoAAAACnRSTlMA0ur/Dn2kXsd0hcc+BAAAAIpJREFUGJVlj9sSgzAIRDGrJm7MxSRq//9Li1pn2soLcGCWRUTDjq7r3GjlCkuGSMZAnmjSnjXGqomTSE8S8wqUBi17GbTPB1gadGUQR8DPa61LLhvoxCBtfi4pLdnvCUao8xtkDz6BwVpvoNrmI1paU3CKDgx47dfZeJxVY+HH2GGd39afz/29/wYuhgnIfA5CigAAAABJRU5ErkJggg==",
+            "module": "get_analysis",
+            "module_name": "VoiceGPT",
+            "visible": true,
+            "options": false,
+            "father": "module",
+            "group": "scripts",
+            "linux": false,
+            "windows": true,
+            "mac": true,
+            "docker": false
+        }
+    ]
+}
