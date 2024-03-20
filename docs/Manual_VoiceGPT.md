@@ -6,7 +6,8 @@
   
 Send an audio and receive the data according to the template created in VoiceGPT.  
   
-![banner](imgs/Banner_VoiceGPT.png o jpg)
+![banner](imgs/Banner-VoiceGPT.jpg)
+
 ## How to install this module
   
 To install the module in Rocketbot Studio, it can be done in two ways:

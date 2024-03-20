@@ -60,8 +60,8 @@ try:
             headers = {'x-api-key': api_key}
 
             response = requests.request("POST", url, headers=headers, data=payload, files=files)
-           
-            SetVar(result, response.text)
+
+            SetVar(result, response.json()['data'])
 
         except Exception as e:
             SetVar(result, False)

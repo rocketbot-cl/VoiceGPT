@@ -6,7 +6,7 @@
   
 Envie um áudio e receba os dados conforme template criado no VoiceGPT.  
   
-![banner](imgs/Banner_VoiceGPT.png o jpg)
+![banner](imgs/Banner-VoiceGPT.jpg)
 
 ## Como instalar este módulo
   
