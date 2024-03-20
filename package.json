@@ -25,19 +25,19 @@
     "children": [
         {
             "en": {
-                "title": "Get audio template",
+                "title": "Analyze audio",
                 "description": "Obtains the data indicated in the VoiceGPT template from an audio",
                 "title_options": "Select Option",
                 "options":null
             },
             "es": {
-                "title": "Obtener template de audio",
+                "title": "Analizar audio",
                 "description": "Obtiene de un audio los datos indicados en el template de VoiceGPT",
                 "title_options": "Seleccione una opción",
                 "options": null
             },
             "pr": {
-                "title": "Obter o template do audio",
+                "title": "Analisar áudio",
                 "description": "Obtém os dados indicados no modelo VoiceGPT de um áudio",
                 "title_options": "Selecione uma opção",
                 "options": null
