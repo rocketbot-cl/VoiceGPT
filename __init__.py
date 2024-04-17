@@ -71,6 +71,21 @@ try:
             PrintException()
             raise e
         
+    if module == "get_data":
+        file = GetParams("file")
+        result = GetParams("result")
+        try:
+            from tinytag import TinyTag
+            tag = TinyTag.get(file)
+            SetVar(result, tag)
+
+        except Exception as e:
+            SetVar(result, False)
+            import traceback
+            traceback.print_exc
+            PrintException()
+            raise e
+        
 except Exception as e:
             import traceback
             traceback.print_exc
